@@ -1,9 +1,13 @@
 pipeline {
     tools {
-        jdk 'JAVA_HOME2'      
-        maven 'M2_HOME2'   
+        jdk 'JAVA_HOME1'      
+        maven 'M2_HOME1'   
     }
-    agent {label 'winslave'}
+    agent {
+    node {
+    label 'linuxslave'
+    }
+    }
 
     stages {
 
